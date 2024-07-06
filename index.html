@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram followers check</title>
+</head>
+<body>
+    <h1>See who's not following you back on instagram</h1>
+    <h3>First you need to download your JSON data from instagram (desktop version):</p>
+        <ol>
+            <li>Go to Settings → "See more in accounts centre" → "Your information and permissions"</li>
+            <li>Click "Download or transfer information"</li>
+            <li>Then select your account and then the types of information (you only need "Followers and following" but you can select other data if you want to look at it)</li>
+            <li>Select "Download to device"</li>
+            <li>Change the date range to "All time" and click save</li>
+            <li>Change the format to "JSON" and click save</li>
+            <li>Click "Create Files" and wait for your request to complete (should be fairly quick depending on how much info you requested)</li>
+            <li>Click "Download" and re-enter your password</li>
+        </ol>
+        <p>Then fetch the file containing your followers (probably called followers_1.json) and the one containing your following (probably called following.json), upload them here, and a list of people not following you back will appear :)</p>
+
+        <form>
+            <label for="followers">Followers JSON file:</label>
+        <input type="file" id="followers" accept="application/json"><br><br>
+        <label for="following">Following JSON file:</label>
+        <input type="file" id="following" accept="application/json"><br><br>
+        <button type="button" onclick="readFiles()">Go!!</button>
+          </form>
+
+          <div id="output">
+            <h2 id="title"></h2>
+            <p id="not-following" class="not-following"></p>
+        </div>
+
+<script src="check.js"></script>
+</body>
+</html>
